@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaurav Mehta | CFO | Executive LinkedIn Branding</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0C0C14; --bg-card: rgba(255,255,255,0.03); --bg-card-hover: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.06); --border-hover: rgba(255,255,255,0.12);
+  --text: #FFFFFF; --text-muted: rgba(255,255,255,0.65); --text-subtle: rgba(255,255,255,0.45);
+  --accent-1: #8B7BF4; --accent-2: #5EEAD4;
+  --gradient: linear-gradient(135deg, #8B7BF4, #5EEAD4);
+  --section-gap: 100px;
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Sora', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s ease; background: transparent; }
+nav.scrolled { background: rgba(12,12,20,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 14px 60px; }
+.nav-logo { font-size: 1.4rem; color: var(--text); letter-spacing: -0.02em; font-weight: 700; }
+.nav-logo span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--accent-1); }
+.nav-cta { background: var(--gradient) !important; color: var(--bg) !important; padding: 10px 24px !important; border-radius: 100px; font-size: 0.8rem !important; font-weight: 600 !important; letter-spacing: 0.04em !important; transition: transform 0.3s, box-shadow 0.3s !important; }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(139,123,244,0.25) !important; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; width: 30px; height: 20px; position: relative; z-index: 1001; }
+.menu-toggle span { display: block; width: 100%; height: 2px; background: var(--text); position: absolute; left: 0; transition: all 0.3s; }
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.menu-toggle span:nth-child(3) { bottom: 0; }
+
+.hero { min-height: 100vh; display: flex; align-items: center; padding: 140px 60px 100px; position: relative; background: var(--bg); overflow: hidden; }
+.hero::before { content: ''; position: absolute; width: 600px; height: 600px; top: -100px; right: -100px; background: radial-gradient(circle, rgba(139,123,244,0.08) 0%, transparent 70%); pointer-events: none; }
+.hero::after { content: ''; position: absolute; width: 400px; height: 400px; bottom: -50px; left: -50px; background: radial-gradient(circle, rgba(94,234,212,0.05) 0%, transparent 70%); pointer-events: none; }
+.hero-content { max-width: 1400px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+.hero-tag { display: inline-flex; align-items: center; gap: 10px; padding: 8px 20px; background: rgba(139,123,244,0.1); border: 1px solid rgba(139,123,244,0.25); border-radius: 100px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-1); margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
+.hero-tag::before { content: ''; width: 6px; height: 6px; background: var(--accent-1); border-radius: 50%; }
+.hero h1 { font-size: clamp(2.4rem, 3.8vw, 3.4rem); line-height: 1.15; letter-spacing: -0.03em; color: var(--text); margin-bottom: 28px; max-width: 620px; font-weight: 700; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
+.hero h1 em { font-style: normal; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-fixline { font-size: clamp(2.4rem, 3.8vw, 3.4rem); line-height: 1.15; letter-spacing: -0.03em; font-weight: 700; margin-bottom: 28px; max-width: 560px; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
+.hero-fixline em { font-style: normal; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.br-desktop { display: inline; }
+
+/* Rotating roles */
+.rotating-wrapper { display: inline; position: relative; }
+.rotating-text { display: inline; }
+.rotating-text span { display: none; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.5); text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.rotating-text span.active { display: inline; }
+.hero-sub { font-size: 1rem; line-height: 1.7; color: var(--text-muted); font-weight: 300; max-width: 560px; margin-bottom: 44px; opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease 0.65s forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; background: var(--gradient); color: var(--bg); font-family: 'Sora', sans-serif; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.02em; border: none; border-radius: 100px; cursor: pointer; text-decoration: none; transition: all 0.35s ease; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(139,123,244,0.3); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; background: transparent; color: var(--text-muted); font-family: 'Sora', sans-serif; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.02em; border: 1.5px solid var(--border-hover); border-radius: 100px; cursor: pointer; text-decoration: none; transition: all 0.35s ease; }
+.btn-secondary:hover { border-color: var(--accent-1); color: var(--accent-1); transform: translateY(-2px); }
+
+.hero-visual { position: relative; }
+.hero-image-wrapper { width: 100%; aspect-ratio: 1/1; max-width: 440px; margin: 0 auto; border-radius: 24px; overflow: hidden; border: 1px solid var(--border); background: #12121C; }
+.hero-image-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-stats { position: absolute; bottom: -30px; left: -40px; display: flex; gap: 0; background: rgba(12,12,20,0.9); border: 1px solid var(--border); border-radius: 16px; padding: 0; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; backdrop-filter: blur(20px); }
+.stat-item { padding: 22px 28px; text-align: center; border-right: 1px solid var(--border); }
+.stat-item:last-child { border-right: none; }
+.stat-number { font-size: 1.5rem; font-weight: 700; display: block; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-label { font-size: 0.65rem; color: var(--text-subtle); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+section { padding: var(--section-gap) 60px; max-width: 1400px; margin: 0 auto; }
+.section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+.section-tag::before { content: ''; width: 28px; height: 1.5px; background: var(--gradient); }
+.section-title { font-size: clamp(1.8rem, 2.8vw, 2.4rem); line-height: 1.2; letter-spacing: -0.02em; color: var(--text); margin-bottom: 16px; max-width: 600px; font-weight: 700; }
+.section-subtitle { font-size: 1rem; line-height: 1.7; color: var(--text-muted); max-width: 600px; font-weight: 300; }
+
+.story-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 80px; margin-top: 48px; }
+.story-text p { font-size: 1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 20px; font-weight: 300; }
+.story-credentials { margin-top: 36px; }
+.timeline { position: relative; padding-left: 60px; }
+.timeline::before { content: ''; position: absolute; left: 23px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent-1), var(--accent-2)); border-radius: 2px; }
+.timeline-item { position: relative; padding: 0 0 48px 32px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot { position: absolute; left: -48px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--gradient); box-shadow: 0 0 20px rgba(139,123,244,0.3); }
+.timeline-dot::after { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 1px solid rgba(139,123,244,0.2); }
+.timeline-year { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+.timeline-title { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.timeline-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; font-weight: 300; max-width: 500px; }
+.story-quote { position: sticky; top: 140px; }
+.story-quote blockquote { font-size: 1.2rem; line-height: 1.6; color: var(--text-muted); font-weight: 300; font-style: italic; border-left: 2px solid; border-image: var(--gradient) 1; padding-left: 28px; }
+.story-quote cite { display: block; margin-top: 20px; font-style: normal; font-weight: 600; font-size: 0.88rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.pillars-section { padding: var(--section-gap) 60px; background: rgba(139,123,244,0.03); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.pillars-inner { max-width: 1400px; margin: 0 auto; }
+.pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+.pillar-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 48px; position: relative; overflow: hidden; transition: all 0.4s ease; display: flex; flex-direction: column; }
+.pillar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient); opacity: 0; transition: opacity 0.4s; }
+.pillar-card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); transform: translateY(-4px); }
+.pillar-card:hover::before { opacity: 1; }
+.pillar-number { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+.pillar-card h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 16px; color: var(--text); }
+.pillar-card > p { font-size: 0.9rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 28px; font-weight: 300; }
+.pillar-features { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.pillar-features li { font-size: 0.85rem; color: var(--text-muted); padding-left: 24px; position: relative; font-weight: 400; }
+.pillar-features li::before { content: '\2192'; position: absolute; left: 0; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600; }
+
+#why-linkedin { padding-bottom: 80px; }
+.challenge-hero { display: grid; grid-template-columns: auto 1fr; gap: 60px; align-items: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 56px; margin-top: 48px; }
+.challenge-stat-big { font-size: 5rem; font-weight: 700; line-height: 1; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.challenge-stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 8px; max-width: 200px; line-height: 1.5; font-weight: 300; }
+.challenge-hero-right p { font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); font-weight: 300; }
+.challenge-scenarios { margin-top: 70px; }
+.challenge-scenarios-title { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 32px; color: var(--text); }
+.scenarios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.scenario-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; display: flex; gap: 20px; transition: all 0.3s; }
+.scenario-card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+.scenario-num { font-size: 1.8rem; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; flex-shrink: 0; line-height: 1; padding-top: 2px; }
+.scenario-content h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+.scenario-content p { font-size: 0.85rem; line-height: 1.65; color: var(--text-muted); font-weight: 300; }
+.challenge-what { margin-top: 70px; }
+.challenge-what-header h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.challenge-what-header p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 32px; font-weight: 300; }
+.challenge-weeks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.week-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; transition: all 0.3s; }
+.week-card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+.week-number { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 14px; }
+.week-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; color: var(--text); }
+.week-card p { font-size: 0.82rem; line-height: 1.65; color: var(--text-muted); font-weight: 300; }
+.challenge-cta-box { display: flex; align-items: center; justify-content: space-between; background: var(--gradient); border-radius: 20px; padding: 48px 56px; margin-top: 60px; }
+.challenge-cta-content h3 { font-size: 1.5rem; font-weight: 700; color: var(--bg); margin-bottom: 8px; }
+.challenge-cta-content p { font-size: 0.9rem; color: rgba(12,12,20,0.6); max-width: 480px; font-weight: 400; }
+.challenge-cta-box .btn-primary { background: var(--bg); color: var(--text); flex-shrink: 0; }
+.challenge-cta-box .btn-primary:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+
+.clients-section { padding: var(--section-gap) 60px; background: rgba(94,234,212,0.02); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.clients-inner { max-width: 1400px; margin: 0 auto; }
+.clients-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 24px; }
+.clients-numbers { display: flex; gap: 40px; }
+.client-stat { text-align: center; }
+.client-stat-number { display: block; font-size: 2.2rem; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.client-stat-label { font-size: 0.7rem; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+.clients-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.client-chip { padding: 10px 22px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; font-size: 0.82rem; color: var(--text-muted); transition: all 0.3s; font-weight: 400; }
+.client-chip:hover { background: var(--bg-card-hover); border-color: var(--accent-1); color: var(--text); }
+
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.testimonial-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 36px; transition: all 0.3s; }
+.testimonial-card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+.testimonial-stars { font-size: 0.9rem; margin-bottom: 16px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+.testimonial-card blockquote { font-size: 0.88rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 24px; font-weight: 300; font-style: normal; }
+.testimonial-author { display: flex; align-items: center; gap: 14px; }
+.testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--bg); }
+.testimonial-name { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+.testimonial-role { font-size: 0.75rem; color: var(--text-subtle); margin-top: 2px; }
+
+.packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.package-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 44px; position: relative; transition: all 0.3s; }
+.package-card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+.package-card.featured { background: rgba(139,123,244,0.06); border-color: rgba(139,123,244,0.2); }
+.package-card.featured:hover { border-color: rgba(139,123,244,0.35); }
+.package-badge { position: absolute; top: -1px; right: 32px; background: var(--gradient); color: var(--bg); padding: 6px 16px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; border-radius: 0 0 10px 10px; }
+.package-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+.package-for { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.6; font-weight: 300; }
+.package-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.package-features li { font-size: 0.85rem; color: var(--text-muted); padding-left: 24px; position: relative; font-weight: 400; }
+.package-features li::before { content: '\2713'; position: absolute; left: 0; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; font-size: 0.8rem; }
+.package-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
+.package-billing { font-size: 0.75rem; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; }
+.package-cta { display: block; text-align: center; padding: 14px 28px; background: transparent; color: var(--text-muted); border: 1px solid var(--border-hover); border-radius: 100px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.3s; }
+.package-cta:hover { border-color: var(--accent-1); color: var(--accent-1); }
+.package-card.featured .package-cta { background: var(--gradient); color: var(--bg); border: none; font-weight: 600; }
+.package-card.featured .package-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(139,123,244,0.25); }
+.call-callout { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 44px; margin-top: 48px; }
+.call-callout p { font-size: 0.92rem; color: var(--text-muted); font-weight: 300; }
+.call-callout strong { color: var(--text); font-weight: 600; }
+
+.contact-section { padding: var(--section-gap) 60px; background: rgba(139,123,244,0.03); border-top: 1px solid var(--border); }
+.contact-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.contact-text { font-size: 1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 36px; font-weight: 300; }
+.contact-methods { display: flex; flex-direction: column; gap: 16px; }
+.contact-method { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.3s; }
+.contact-method:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+.contact-method-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(139,123,244,0.08); border-radius: 12px; font-size: 1.1rem; }
+.contact-method span { font-size: 0.88rem; font-weight: 500; display: block; color: var(--text); }
+.contact-method small { font-size: 0.75rem; color: var(--text-subtle); display: block; margin-top: 2px; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: 'Sora', sans-serif; font-size: 0.88rem; transition: border-color 0.3s; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-1); }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-subtle); }
+.contact-form select { color: var(--text-subtle); }
+.contact-form textarea { height: 140px; resize: vertical; }
+.form-submit { padding: 16px 40px; background: var(--gradient); color: var(--bg); font-family: 'Sora', sans-serif; font-size: 0.88rem; font-weight: 600; border: none; border-radius: 100px; cursor: pointer; transition: all 0.35s; width: fit-content; }
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(139,123,244,0.3); }
+
+/* ─── PACKAGE TABS ─── */
+.package-tabs { display: flex; gap: 8px; margin-top: 32px; margin-bottom: 40px; flex-wrap: wrap; }
+.package-tab { padding: 12px 28px; border-radius: 100px; font-size: 0.85rem; font-weight: 500; cursor: pointer; border: 1px solid var(--border-hover); background: transparent; color: var(--text-muted); font-family: 'Sora', sans-serif; transition: all 0.3s; }
+.package-tab:hover { border-color: var(--accent-1); color: var(--accent-1); }
+.package-tab.active { background: var(--gradient); color: var(--bg); border-color: transparent; font-weight: 600; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.packages-grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.challenge-package { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 48px; max-width: 600px; transition: all 0.3s; }
+.challenge-package:hover { background: var(--bg-card-hover); border-color: var(--border-hover); }
+.challenge-package h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+.challenge-package .package-for { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.6; font-weight: 300; }
+.challenge-package .package-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.challenge-package .package-features li { font-size: 0.85rem; color: var(--text-muted); padding-left: 24px; position: relative; font-weight: 400; }
+.challenge-package .package-features li::before { content: '\2713'; position: absolute; left: 0; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; font-size: 0.8rem; }
+
+footer { border-top: 1px solid var(--border); padding: 36px 60px; }
+.footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-subtle); }
+.footer-links { display: flex; gap: 24px; list-style: none; }
+.footer-links a { color: var(--text-subtle); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--accent-1); }
+
+.reveal { opacity: 1; transform: translateY(0); transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal.hidden { opacity: 0; transform: translateY(40px); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 1024px) {
+  :root { --section-gap: 80px; }
+  nav { padding: 16px 32px; } nav.scrolled { padding: 12px 32px; }
+  section { padding: var(--section-gap) 32px; }
+  .pillars-section, .clients-section, .contact-section { padding: var(--section-gap) 32px; }
+  .hero { padding: 120px 32px 80px; }
+  .hero-content { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { max-width: 400px; margin: 0 auto; }
+  .hero-stats { position: relative; bottom: auto; left: auto; transform: none; margin: 24px auto 0; width: fit-content; }
+  .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .story-quote { position: static; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .challenge-hero { grid-template-columns: 1fr; gap: 32px; }
+  .challenge-weeks { grid-template-columns: 1fr 1fr; }
+  .challenge-cta-box { flex-direction: column; text-align: center; }
+  .scenarios-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  .packages-grid { grid-template-columns: 1fr; }
+  .packages-grid-2col { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .clients-header { flex-direction: column; align-items: flex-start; }
+  .call-callout { flex-direction: column; text-align: center; }
+  .nav-links { display: none; }
+  .nav-links.show { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(12,12,20,0.98); backdrop-filter: blur(20px); padding: 24px; gap: 20px; border-bottom: 1px solid var(--border); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+  .nav-links.show a { font-size: 0.95rem; color: var(--text-muted) !important; }
+  .nav-links.show a:hover { color: var(--accent-1) !important; }
+  .nav-links.show .nav-cta { text-align: center; width: fit-content; color: var(--bg) !important; }
+  .menu-toggle { display: block; }
+}
+@media (max-width: 640px) {
+  :root { --section-gap: 64px; }
+  .hero { padding: 100px 24px 60px; }
+  section { padding: var(--section-gap) 24px; }
+  .pillars-section, .clients-section, .contact-section { padding: var(--section-gap) 24px; }
+  footer { padding: 28px 24px; } nav { padding: 16px 24px; } nav.scrolled { padding: 12px 24px; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero-fixline { font-size: 1.9rem; }
+  .br-desktop { display: none; }
+  .story-credentials { margin-top: 24px; }
+  .timeline { padding-left: 48px; }
+  .timeline-dot { left: -36px; }
+  .challenge-weeks { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; } .hero-actions a { text-align: center; justify-content: center; }
+  .challenge-hero { padding: 32px; } .challenge-cta-box { padding: 32px; } .pillar-card { padding: 32px; }
+  .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav id="navbar">
+  <div class="nav-logo">Gaurav<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="https://topmate.io/gaurav/page/H0AkJy0mY5X5Pgs2Nq" target="_blank">30-Day Challenge</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">CFO &bull; Executive Brand Strategist &bull; Speaking Coach</div>
+      <h1>Be the first name that comes up when someone says<br>Do you know a good<br><span class="rotating-wrapper"><span class="rotating-text"><span class="active">Chief Financial Officer</span><span>Finance Controller</span><span>Fractional CFO</span><span>VP of Finance</span><span>Head of Finance</span><span>Finance Director</span><span>FP&amp;A Director</span><span>VP of Treasury</span><span>Audit Director</span></span></span>?</h1>
+      <p class="hero-sub">An ex-CFO, now working in branding the best finance leaders globally. I work at the intersection of finance leadership, strategic communication, and executive presence.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Work With Me →</a>
+        <a href="https://topmate.io/gaurav/page/H0AkJy0mY5X5Pgs2Nq" class="btn-secondary" target="_blank">30-Day Speaking Challenge</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrapper">
+        <img src="website photo.jpg" alt="Gaurav Mehta - CFO, Executive Brand Strategist, LinkedIn Top Voice">
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">100K+</span>
+          <span class="stat-label">Followers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24+</span>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Countries</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ABOUT / STORY ─── -->
+<section id="about">
+  <div class="section-tag">My Story</div>
+  <div class="section-title">From finance backroom to centre stage.</div>
+  
+  <div class="story-grid">
+    <div class="story-text">
+      <p>I started in finance doing what most finance professionals are trained to do: work hard, be accurate, stay in the background, let the numbers speak. For years, I believed that if my work was strong enough, it would automatically be noticed.</p>
+      <p>It did not work that way. While working with founders, CEOs, and boards I realized the gap between competence and visibility. I started consciously packaging my thinking and presenting myself as a strategic thinker, not just a numbers guy.</p>
+      <p>Today, I work with CFOs and senior finance leaders who are at a similar inflection point. They are competent, experienced, and trusted with the numbers, but they feel their influence is capped. If no one can see how you think, they cannot trust you with bigger decisions.</p>
+      
+      <div class="story-credentials">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">The Foundation</div>
+            <div class="timeline-title">24+ years in finance leadership</div>
+            <div class="timeline-desc">Started where every finance leader starts: in the numbers. Built a career across FP&A, controllership, and strategic finance across India and Southeast Asia.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">The Transition</div>
+            <div class="timeline-title">CFO turned CEO</div>
+            <div class="timeline-desc">Made the jump most finance leaders only talk about. Went from managing the P&L to running the company. Real boardroom experience on both sides of the table.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">The Recognition</div>
+            <div class="timeline-title">LinkedIn Top Voice</div>
+            <div class="timeline-desc">Recognized by LinkedIn for Career Management & Job Search Strategy. Not a self-proclaimed title. Built by consistently showing up with real insight.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">The Mission</div>
+            <div class="timeline-title">Founded TaleBreeze. Went global.</div>
+            <div class="timeline-desc">Now helping CFOs and finance leaders across 20+ countries build executive brands that match their actual capabilities. US, UK, Canada, UAE, Saudi, Africa, and growing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="story-quote">
+      <blockquote>My role sits at the intersection of finance leadership, strategic communication, and executive presence. I help finance leaders articulate how they think, not just what they do.</blockquote>
+      <cite>Gaurav Mehta</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT I DO ─── -->
+<div class="pillars-section" id="services">
+  <div class="pillars-inner">
+    <div class="section-tag">What I Do</div>
+    <div class="section-title">Four ways I help finance leaders get noticed.</div>
+    <div class="section-subtitle">From LinkedIn content to 1:1 mentoring to a 30-day speaking challenge. Pick what fits your goals.</div>
+    
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-number">01</div>
+        <h3>Content Strategy &amp; Ghostwriting</h3>
+        <p>Thought leadership posts written in your voice, pulled from your real experience. Stories that sound like you, not like a marketing agency.</p>
+        <ul class="pillar-features">
+          <li>Ghostwritten thought leadership content in your voice</li>
+          <li>Content strategy aligned with your career goals</li>
+          <li>Video content direction and scripting</li>
+          <li>Hashtag and timing optimization</li>
+          <li>Monthly performance analytics</li>
+        </ul>
+      </div>
+      
+      <div class="pillar-card">
+        <div class="pillar-number">02</div>
+        <h3>LinkedIn Profile Optimization</h3>
+        <p>Your LinkedIn profile is the first thing CEOs, investors, and boards see. I make sure it tells the right story before they even read a single post.</p>
+        <ul class="pillar-features">
+          <li>Complete profile rewrite for executive positioning</li>
+          <li>Headline, summary, and experience optimization</li>
+          <li>Engagement and visibility strategy</li>
+          <li>DM and InMail ghostwriting support</li>
+          <li>Personal brand audit and roadmap</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-number">03</div>
+        <h3>1:1 Mentoring</h3>
+        <p>Focused sessions for finance leaders who want direct, personal guidance on career growth, executive presence, and building visibility.</p>
+        <ul class="pillar-features">
+          <li>Personalized career strategy and roadmap</li>
+          <li>Executive presence and communication coaching</li>
+          <li>LinkedIn strategy tailored to your goals</li>
+          <li>Actionable feedback you can use immediately</li>
+          <li>Ongoing accountability and support</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-number">04</div>
+        <h3>30-Day Speaking Challenge</h3>
+        <p>A low-effort, high-impact program for finance leaders who want to speak with confidence in every room, not just behind a spreadsheet.</p>
+        <ul class="pillar-features">
+          <li>Daily exercises that take just 10 to 15 minutes</li>
+          <li>Craft a confident self-introduction</li>
+          <li>Build a sharp elevator pitch for any audience</li>
+          <li>Master small talk with CXOs and senior leaders</li>
+          <li>No stage required, just real everyday moments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ─── WHY LINKEDIN SECTION ─── -->
+<section id="why-linkedin">
+  <div class="section-tag reveal">The Problem</div>
+  <div class="section-title reveal">You're great at your job. But nobody knows it.</div>
+  <div class="section-subtitle reveal">Most finance leaders are technically brilliant but professionally invisible. If no one can see how you think, they can't trust you with bigger decisions.</div>
+  
+  <div class="challenge-hero reveal">
+    <div class="challenge-hero-left">
+      <div class="challenge-stat-big">90%</div>
+      <div class="challenge-stat-label">of CFOs we work with say they're invisible online despite 20+ years of experience</div>
+    </div>
+    <div class="challenge-hero-right">
+      <p>You've spent decades making sharp decisions, managing P&Ls, advising boards, and driving strategy. But your LinkedIn still reads like a resume from 2015. Meanwhile, less experienced professionals are getting the inbound opportunities, the speaking invites, and the board seats. Not because they're better. Because they're visible.</p>
+    </div>
+  </div>
+  
+  <div class="challenge-scenarios">
+    <h3 class="challenge-scenarios-title reveal">Sound familiar?</h3>
+    <div class="scenarios-grid">
+      <div class="scenario-card reveal">
+        <div class="scenario-num">01</div>
+        <div class="scenario-content">
+          <h4>Nobody knows who you are</h4>
+          <p>You've made million-dollar decisions. But your LinkedIn says "CFO at Company X" and has 200 connections. Outside your office, you don't exist.</p>
+        </div>
+      </div>
+      <div class="scenario-card reveal">
+        <div class="scenario-num">02</div>
+        <div class="scenario-content">
+          <h4>You don't know what to post</h4>
+          <p>You open LinkedIn, stare at the blank screen, and close it. Another week gone. Zero posts. Zero visibility. The cycle repeats.</p>
+        </div>
+      </div>
+      <div class="scenario-card reveal">
+        <div class="scenario-num">03</div>
+        <div class="scenario-content">
+          <h4>Posting feels beneath you</h4>
+          <p>You see others posting and it looks performative. You want to sound like a leader, not a LinkedIn influencer. So you say nothing.</p>
+        </div>
+      </div>
+      <div class="scenario-card reveal">
+        <div class="scenario-num">04</div>
+        <div class="scenario-content">
+          <h4>Opportunities go to louder people</h4>
+          <p>Board seats. Advisory roles. Speaking invites. They go to people who are visible, not the most qualified. You know it. It stings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="challenge-what reveal">
+    <div class="challenge-what-header">
+      <h3>How we transform your LinkedIn presence</h3>
+      <p>A proven process that has worked for 50+ finance leaders across 20+ countries.</p>
+    </div>
+    <div class="challenge-weeks">
+      <div class="week-card">
+        <div class="week-number">Step 1</div>
+        <h4>Profile Overhaul</h4>
+        <p>We rewrite your headline, summary, and experience to position you as a strategic leader, not just a job title. First impressions happen here.</p>
+      </div>
+      <div class="week-card">
+        <div class="week-number">Step 2</div>
+        <h4>Content Strategy</h4>
+        <p>We extract stories from your real experience and turn them into a content calendar. Posts that sound like you, resonate with your audience, and build your authority.</p>
+      </div>
+      <div class="week-card">
+        <div class="week-number">Step 3</div>
+        <h4>Ghostwriting &amp; Publishing</h4>
+        <p>We write and publish consistently in your voice. You review, approve, and watch your network grow while focusing on what you do best.</p>
+      </div>
+      <div class="week-card">
+        <div class="week-number">Step 4</div>
+        <h4>Engage &amp; Grow</h4>
+        <p>We optimize timing, hashtags, and engagement strategy. Monthly analytics show you exactly how your visibility and influence are growing.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="challenge-cta-box reveal">
+    <div class="challenge-cta-content">
+      <h3>Zero AI. 100% You.</h3>
+      <p>Every post is pulled from your experience and written in your voice. I believe every leader's story deserves to be told well.</p>
+    </div>
+    <a href="#contact" class="btn-primary">Get Started →</a>
+  </div>
+</section>
+
+<!-- ─── CLIENTS ─── -->
+<div class="clients-section" id="clients">
+  <div class="clients-inner">
+    <div class="clients-header">
+      <div>
+        <div class="section-tag reveal">Global Reach</div>
+        <div class="section-title reveal">Leaders who trust me with their voice.</div>
+      </div>
+      <div class="clients-numbers reveal">
+        <div class="client-stat">
+          <span class="client-stat-number">5</span>
+          <span class="client-stat-label">Continents</span>
+        </div>
+        <div class="client-stat">
+          <span class="client-stat-number">20+</span>
+          <span class="client-stat-label">Countries</span>
+        </div>
+        <div class="client-stat">
+          <span class="client-stat-number">50+</span>
+          <span class="client-stat-label">Leaders Served</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="clients-grid reveal">
+      <div class="client-chip">Group CFO, Saudi</div>
+      <div class="client-chip">Group CFO, Dubai</div>
+      <div class="client-chip">South East Asia CFO</div>
+      <div class="client-chip">CFO (Oil & Gas)</div>
+      <div class="client-chip">Group CFO (Hospitality)</div>
+      <div class="client-chip">Group CFO (Global Bank)</div>
+      <div class="client-chip">Group CFO (Large Airline)</div>
+      <div class="client-chip">Group CFO (Retail)</div>
+      <div class="client-chip">Head of Finance GCC</div>
+      <div class="client-chip">CFO (Pharma), Seoul</div>
+      <div class="client-chip">Director FP&A</div>
+      <div class="client-chip">Group CFO, Zimbabwe</div>
+      <div class="client-chip">Partner (EY), India</div>
+      <div class="client-chip">VP, Fintech</div>
+      <div class="client-chip">Founder, Finance AI</div>
+      <div class="client-chip">Group CFO & CSO</div>
+      <div class="client-chip">Fractional CFO, India</div>
+      <div class="client-chip">Head of Finance (FP&A)</div>
+      <div class="client-chip">CEO (Media)</div>
+      <div class="client-chip">Supply Chain Director</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials">
+  <div class="section-tag reveal">Testimonials</div>
+  <div class="section-title reveal">What clients say.</div>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"Gaurav and his team made my profile look professional in a matter of hours. The language and the content is crisp and professional. Superior quality work. Highly recommend."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">C</div>
+        <div>
+          <div class="testimonial-name">Client</div>
+          <div class="testimonial-role">Group CFO</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"Absolute pleasure to work with. Thorough professional and understands the requirements within no time. Impressed and amazed with the creativity. Highly recommend."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">R</div>
+        <div>
+          <div class="testimonial-name">Rishi Gupta</div>
+          <div class="testimonial-role">Finance Leader</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"The call with you has created a lasting impression on my future journey. I am already seeing benefits by following your recommendations on my pathway to become CFO."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">R</div>
+        <div>
+          <div class="testimonial-name">Raghavendran S.</div>
+          <div class="testimonial-role">Senior Finance Professional</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"We have interacted multiple times and have always received action-oriented guidance layered with personal experiences. I'm seeing real-time results. A great mentor."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">P</div>
+        <div>
+          <div class="testimonial-name">Pavithra</div>
+          <div class="testimonial-role">Finance Professional</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"Response on the recent posts has been amazing. Professional and great experience to work with. Understood the requirement of the client perfectly."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">A</div>
+        <div>
+          <div class="testimonial-name">Client</div>
+          <div class="testimonial-role">Director, Finance</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <blockquote>"This post is worth more than a 100 finfluencer courses. Gaurav came across as a very genuine, humble personality with a strong orientation to help."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">L</div>
+        <div>
+          <div class="testimonial-name">LinkedIn Comment</div>
+          <div class="testimonial-role">Finance Community</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PACKAGES ─── -->
+<section id="packages">
+  <div class="section-tag reveal">Packages</div>
+  <div class="section-title reveal">Choose how we work together.</div>
+  <div class="section-subtitle reveal">Pick the service that fits where you are and where you want to go.</div>
+  
+  <div class="package-tabs reveal">
+    <button class="package-tab active" onclick="showTab('linkedin')">LinkedIn Branding</button>
+    <button class="package-tab" onclick="showTab('mentoring')">1:1 Mentoring</button>
+    <button class="package-tab" onclick="showTab('challenge')">30-Day Speaking Challenge</button>
+  </div>
+
+  <!-- TAB 1: LinkedIn Branding -->
+  <div id="tab-linkedin" class="tab-content active">
+    <div class="packages-grid">
+      <div class="package-card reveal">
+        <h3>Starter</h3>
+        <div class="package-for">For leaders beginning their LinkedIn journey who want consistent, quality content.</div>
+        <ul class="package-features">
+          <li>Regular LinkedIn posts in your voice</li>
+          <li>30-min monthly strategy call</li>
+          <li>Monthly performance insights</li>
+          <li>Content calendar planning</li>
+          <li>Hashtag & timing optimization</li>
+        </ul>
+        <div class="package-divider"></div>
+        <div class="package-billing">Billed Quarterly</div>
+        <a href="#contact" class="package-cta">Get Started</a>
+      </div>
+      
+      <div class="package-card featured reveal">
+        <div class="package-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <div class="package-for">For leaders who want strategic positioning and a robust LinkedIn presence.</div>
+        <ul class="package-features">
+          <li>Increased post frequency & strategic mix</li>
+          <li>Bi-weekly strategy calls</li>
+          <li>Profile optimization (one-time)</li>
+          <li>Engagement & DM prompts</li>
+          <li>Monthly performance analytics</li>
+          <li>Email & WhatsApp support</li>
+        </ul>
+        <div class="package-divider"></div>
+        <div class="package-billing">Billed Quarterly</div>
+        <a href="#contact" class="package-cta">Get Started</a>
+      </div>
+      
+      <div class="package-card reveal">
+        <h3>Elite</h3>
+        <div class="package-for">For C-suite leaders who want influence and visibility with minimal time commitment.</div>
+        <ul class="package-features">
+          <li>Unlimited posts as needed</li>
+          <li>Weekly strategy calls</li>
+          <li>Custom carousel & visual design</li>
+          <li>Priority same-day support</li>
+          <li>Full ghostwriting: DMs, InMail, articles</li>
+          <li>Collaboration with your PR/marketing team</li>
+          <li>Quarterly Personal Brand Report & Roadmap</li>
+        </ul>
+        <div class="package-divider"></div>
+        <div class="package-billing">Billed Quarterly</div>
+        <a href="#contact" class="package-cta">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: 1:1 Mentoring -->
+  <div id="tab-mentoring" class="tab-content">
+    <div class="packages-grid-2col">
+      <div class="package-card reveal">
+        <h3>Single Session</h3>
+        <div class="package-for">A focused 1-hour call for finance leaders who want clear, actionable guidance on a specific challenge.</div>
+        <ul class="package-features">
+          <li>60-minute deep-dive session</li>
+          <li>Career strategy and positioning advice</li>
+          <li>LinkedIn and personal branding review</li>
+          <li>Personalized action plan after the call</li>
+          <li>Follow-up summary with next steps</li>
+        </ul>
+        <div class="package-divider"></div>
+        <div class="package-billing">One-Time</div>
+        <a href="https://topmate.io/gaurav/1531106" class="package-cta" target="_blank">Book a Session</a>
+      </div>
+
+      <div class="package-card featured reveal">
+        <div class="package-badge">Recommended</div>
+        <h3>Monthly Retainer</h3>
+        <div class="package-for">Ongoing mentoring for leaders who want sustained guidance, accountability, and real career momentum.</div>
+        <ul class="package-features">
+          <li>2 calls per month (60 min each)</li>
+          <li>Executive presence and communication coaching</li>
+          <li>LinkedIn strategy tailored to your goals</li>
+          <li>Priority access via email and WhatsApp</li>
+          <li>Quarterly career progress review</li>
+          <li>Ongoing accountability and support</li>
+        </ul>
+        <div class="package-divider"></div>
+        <div class="package-billing">Billed Monthly</div>
+        <a href="#contact" class="package-cta">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: 30-Day Speaking Challenge -->
+  <div id="tab-challenge" class="tab-content">
+    <div class="challenge-package">
+      <h3>30-Day Speaking Confidence Challenge</h3>
+      <div class="package-for">A low-effort, high-impact program for finance leaders who want to speak with confidence in every room. 10 to 15 minutes a day. No stage. No audience. Just real moments.</div>
+      <ul class="package-features">
+        <li>Week 1: Craft a confident self-introduction</li>
+        <li>Week 2: Build a sharp elevator pitch for any audience</li>
+        <li>Week 3: Master small talk with CXOs and senior leaders</li>
+        <li>Week 4: Simulate real scenarios and build muscle memory</li>
+        <li>Daily exercises designed for busy finance professionals</li>
+        <li>Frameworks you'll use for the rest of your career</li>
+      </ul>
+      <div class="package-divider"></div>
+      <a href="https://topmate.io/gaurav/page/H0AkJy0mY5X5Pgs2Nq" class="package-cta" target="_blank" style="display:inline-block; width:auto;">Learn More & Join →</a>
+    </div>
+  </div>
+
+  <div class="call-callout reveal">
+    <p><strong>Not sure which is right for you?</strong> Book a free discovery call and we'll figure it out together.</p>
+    <a href="#contact" class="btn-primary">Let's Talk →</a>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="section-tag">Get in Touch</div>
+      <div class="section-title">Let's build your executive presence.</div>
+      <p class="contact-text">Whether you're looking for LinkedIn content support, 1:1 mentoring, or just want to explore what working together might look like, I'd love to hear from you.</p>
+      
+      <div class="contact-methods">
+        <a href="mailto:hello@gauravmehta.me" class="contact-method">
+          <div class="contact-method-icon">✉</div>
+          <div>
+            <span>hello@gauravmehta.me</span>
+            <small>Email me directly</small>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/gauravmehta15/" target="_blank" class="contact-method">
+          <div class="contact-method-icon">in</div>
+          <div>
+            <span>linkedin.com/in/gauravmehta15</span>
+            <small>Connect on LinkedIn</small>
+          </div>
+        </a>
+        <a href="https://topmate.io/gaurav/" target="_blank" class="contact-method">
+          <div class="contact-method-icon">📅</div>
+          <div>
+            <span>Book a Call</span>
+            <small>Schedule via Topmate</small>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <form class="contact-form" action="https://formsubmit.co/hello@gauravmehta.me" method="POST">
+      <input type="hidden" name="_subject" value="New enquiry from gauravmehta.me">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      <input type="text" name="company" placeholder="Company & Role">
+      <select name="interest">
+        <option value="" disabled selected>I'm interested in...</option>
+        <option value="LinkedIn Content & Branding">LinkedIn Content & Branding</option>
+        <option value="Profile Optimization">Profile Optimization</option>
+        <option value="1:1 Mentoring">1:1 Mentoring</option>
+        <option value="Something Else">Something Else</option>
+      </select>
+      <textarea name="message" placeholder="Tell me a bit about what you're looking for..."></textarea>
+      <button type="submit" class="form-submit">Send Message →</button>
+    </form>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Gaurav Mehta. All rights reserved.</div>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/gauravmehta15/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://topmate.io/gaurav/" target="_blank">Topmate</a></li>
+      <li><a href="mailto:hello@gauravmehta.me">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Reveal on scroll
+document.querySelectorAll('.reveal').forEach(el => el.classList.add('hidden'));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('hidden');
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Package tabs
+function showTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.package-tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Rotating headline words
+const rotatingSpans = document.querySelectorAll('.rotating-text span');
+if (rotatingSpans.length) {
+  let current = 0;
+  setInterval(() => {
+    rotatingSpans[current].classList.remove('active');
+    current = (current + 1) % rotatingSpans.length;
+    rotatingSpans[current].classList.add('active');
+  }, 2000);
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelector('.nav-links').classList.remove('show');
+    }
+  });
+});
+</script>
+</body>
+</html>
